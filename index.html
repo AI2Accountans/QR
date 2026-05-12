@@ -70,55 +70,11 @@
         }
         .contact-form {
             text-align: left;
-            margin-top: 20px;
-        }
-        .form-group {
-            margin-bottom: 12px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 11px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px 14px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            background: rgba(255, 255, 255, 0.6);
-            font-family: inherit;
-            font-size: 14px;
-            box-sizing: border-box;
-            transition: all 0.2s;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: #fff;
-            box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.05);
+            margin-top: 10px;
+            min-height: 400px;
         }
         .btn-submit {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            padding: 14px;
-            border-radius: 10px;
-            border: none;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 10px;
-            letter-spacing: 0.5px;
-        }
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 86, 179, 0.2);
-            background: #004494;
+            display: none; /* Tally tiene su propio botón */
         }
     </style>
 </head>
@@ -127,28 +83,13 @@
     <div class="card">
         <img src="Cacumen Logo_Transparente simbolo.png" alt="Cacumen Logo" class="logo-simbolo">
         <img src="Cacumen Logo_Transparente Nombre.png" alt="Cacumen" class="logo-nombre">
-        <p style="margin-bottom: 20px;">Arquitectura empresarial para la era de la IA</p>
+        <p style="margin-bottom: 10px;">Arquitectura empresarial para la era de la IA</p>
         
-        <form action="https://formspree.io/f/xdabbvry" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Empresa / Organización</label>
-                <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
-            </div>
-            <div class="form-group">
-                <label for="contact">Email o WhatsApp</label>
-                <input type="text" id="contact" name="contact" placeholder="Donde podemos contactarte" required>
-            </div>
-            <div class="form-group">
-                <label for="message">¿En qué podemos apoyarte?</label>
-                <textarea id="message" name="message" rows="3" placeholder="Cuéntanos brevemente tu interés"></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Solicitar Consultoría Privada</button>
-        </form>
+        <div class="contact-form">
+            <iframe data-tally-src="https://tally.so/embed/kdKQXe?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="CACUMEN"></iframe>
+        </div>
     </div>
+    <script async src="https://tally.so/widgets/embed.js"></script>
     <script>
         const canvas = document.getElementById('network-canvas');
         const ctx = canvas.getContext('2d');
