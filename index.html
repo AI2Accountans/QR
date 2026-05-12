@@ -96,6 +96,56 @@
             box-shadow: 0 8px 16px rgba(0, 86, 179, 0.2);
             background: #004494;
         }
+        .direct-contact {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+        .direct-contact h3 {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+        .consultants {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+        }
+        .consultant-item {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+            flex: 1;
+        }
+        .consultant-item:hover {
+            transform: translateY(-5px);
+        }
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        .consultant-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+        }
+        .wa-tag {
+            font-size: 10px;
+            color: #25D366;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
     </style>
 </head>
 <body>
@@ -107,6 +157,22 @@
         
         <div class="contact-form">
             <button data-tally-open="kdKQXe" data-tally-layout="modal" data-tally-width="500" class="btn-submit">Solicitar Consultoría Privada</button>
+        </div>
+
+        <div class="direct-contact">
+            <h3>Atención Inmediata</h3>
+            <div class="consultants">
+                <a href="https://wa.me/573012716731?text=Hola%20Richard,%20me%20interesa%20la%20arquitectura%20empresarial%20para%20la%20era%20de%20la%20IA" class="consultant-item" target="_blank">
+                    <img src="3012716731.jpg" alt="Richard" class="avatar">
+                    <span class="consultant-name">Richard</span>
+                    <span class="wa-tag">WhatsApp</span>
+                </a>
+                <a href="https://wa.me/573192082530?text=Hola,%20me%20interesa%20la%20arquitectura%20empresarial%20para%20la%20era%20de%20la%20IA" class="consultant-item" target="_blank">
+                    <img src="3192082530.jpg" alt="Consultor" class="avatar">
+                    <span class="consultant-name">Consultor</span>
+                    <span class="wa-tag">WhatsApp</span>
+                </a>
+            </div>
         </div>
     </div>
     <script async src="https://tally.so/widgets/embed.js"></script>
