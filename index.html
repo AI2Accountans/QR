@@ -45,7 +45,7 @@
             border-radius: 24px;
             padding: 40px 30px;
             text-align: center;
-            max-width: 320px;
+            max-width: 380px;
             width: 90%;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
             animation: float 6s ease-in-out infinite;
@@ -68,36 +68,57 @@
             margin: 0 auto 30px;
             display: block;
         }
-        p {
+        .contact-form {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            background: rgba(255, 255, 255, 0.6);
+            font-family: inherit;
             font-size: 14px;
-            color: #555;
-            margin: 0 0 30px;
-            line-height: 1.5;
+            box-sizing: border-box;
+            transition: all 0.2s;
         }
-        .btn-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.05);
+        }
+        .btn-submit {
+            width: 100%;
+            background: var(--primary);
             color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 14px;
+            border-radius: 10px;
             border: none;
+            font-weight: 600;
+            font-size: 15px;
             cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
         }
-        .btn-whatsapp:hover {
+        .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-        }
-        .btn-whatsapp svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
+            box-shadow: 0 8px 16px rgba(0, 86, 179, 0.2);
+            background: #004494;
         }
     </style>
 </head>
@@ -106,14 +127,27 @@
     <div class="card">
         <img src="Cacumen Logo_Transparente simbolo.png" alt="Cacumen Logo" class="logo-simbolo">
         <img src="Cacumen Logo_Transparente Nombre.png" alt="Cacumen" class="logo-nombre">
-        <p>Arquitectura empresarial para la era de la IA</p>
+        <p style="margin-bottom: 20px;">Arquitectura empresarial para la era de la IA</p>
         
-        <a href="https://chat.whatsapp.com/LfWb0N556mlHQxDGdsZIOL" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.82 0 6.932 3.111 6.932 6.935.002 3.824-3.111 6.935-6.932 6.945z"/>
-            </svg>
-            Continuar en WhatsApp
-        </a>
+        <form action="https://formspree.io/f/xdabbvry" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Empresa / Organización</label>
+                <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+            </div>
+            <div class="form-group">
+                <label for="contact">Email o WhatsApp</label>
+                <input type="text" id="contact" name="contact" placeholder="Donde podemos contactarte" required>
+            </div>
+            <div class="form-group">
+                <label for="message">¿En qué podemos apoyarte?</label>
+                <textarea id="message" name="message" rows="3" placeholder="Cuéntanos brevemente tu interés"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Solicitar Consultoría Privada</button>
+        </form>
     </div>
     <script>
         const canvas = document.getElementById('network-canvas');
